@@ -24,7 +24,7 @@ jobs:
               run: go build -o go-web-app
 
             - name: Test
-              run: go main_test ./..
+              run: go main_test -o go-web-app
 
     code-quality:
         runs-on: ubuntu-latest
