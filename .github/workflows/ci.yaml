@@ -38,7 +38,11 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
+    
+    - name: Install GolangCI-Lint
+      run: |
+        curl -sSfL https://github.com/golangci/golangci-lint/releases/download/v1.56.2/golangci-lint-1.56.2-linux-amd64.tar.gz | tar -xz -C /usr/local/bin
+        
     - name: Run golangci/golangci-lint 
       uses: golangci/golangci-lint-action@v6
       with:
